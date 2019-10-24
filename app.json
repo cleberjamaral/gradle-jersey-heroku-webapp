@@ -1,0 +1,5 @@
+{
+  "name": "Gradle Jersey on Heroku",
+  "description": "A really, really bare-bones Gradle app using Jersey, which can easily be deployed to Heroku.",
+  "image": "heroku/gradle"
+}
