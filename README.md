@@ -2,22 +2,38 @@
 
 A really, really bare-bones Gradle app using Jersey, which can easily be deployed to Heroku.
 
-## Running Locally
+## Straightforward deploying to Heroku
 
-Make sure you have Java installed. Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
+1. Fork this repository
+1. Go to heroku website, create an app giving any name to it
+1. On Deploy -> Deployment method choose github
+1. find 'gradle-jersey-heroku-webapp', your fork in your github
+1. 'Deploy branch'
+
+## Deploying from local repository to Heroku
+
+### Running locally
+
+You can first test it locally just using gradle. To do so, make sure you have Java installed. 
 
 ```sh
 $ git clone https://github.com/cleberjamaral/gradle-jersey-heroku-webapp.git
 $ cd gradle-jersey-heroku-webapp
+$ ./gradlew run
+```
+
+Your app should now be running on [localhost:8080](http://localhost:8080/). 
+
+After installing the [Heroku Toolbelt](https://toolbelt.heroku.com/) you can test the app locally using heroku CLI:
+
+```sh
 $ ./gradlew stage
 $ heroku local web
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-## Deploying to Heroku
-
-Make sure you have heroku [CLI installed](https://devcenter.heroku.com/articles/heroku-cli)
+### Deploying from local repository
 
 ```sh
 $ heroku create
